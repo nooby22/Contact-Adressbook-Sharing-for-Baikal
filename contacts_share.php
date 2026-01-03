@@ -72,6 +72,7 @@ try {
 
         $pdo = new PDO("sqlite:" . $dbFile);
         $pkType = "INTEGER PRIMARY KEY AUTOINCREMENT";
+        $principalType = "TEXT"; // SQLite erlaubt Index auf TEXT
         $insertIgnore = "INSERT OR IGNORE";
         $dbMode = "SQLite (" . basename($dbFile) . ")";
     } else {
@@ -84,6 +85,7 @@ try {
         
         $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $user, $pass);
         $pkType = "INTEGER PRIMARY KEY AUTO_INCREMENT";
+        $principalType = "VARCHAR(255)"; // FIX für MySQL Key Length Error
         $insertIgnore = "INSERT IGNORE";
         $dbMode = "MySQL/MariaDB (Host: $host)";
     }
@@ -143,4 +145,5 @@ try {
 } catch (Exception $e) {
     echo "<h4>Verbindungsfehler</h4><p>" . $e->getMessage() . "</p>";
 }
+
 
