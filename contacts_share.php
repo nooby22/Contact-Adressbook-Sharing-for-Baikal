@@ -9,7 +9,7 @@
  *
  * Mehr Informationen: www.gnu.org
  *
- * @file contacts_share.php Rev.0.3
+ * @file contacts_share.php Rev.0.4
  * @brief Baïkal Adressbuch-Share-Manager 2026
  * This script is a UI for sharing addressbooks (with baikal admin credentials)
  * Place the file into the baïkal\html folder (rights 644), open it in your browser with admin credentials
@@ -145,5 +145,6 @@ try {
 } catch (Exception $e) {
     echo "<h4>Verbindungsfehler</h4><p>" . $e->getMessage() . "</p>";
 }
+
 
 
