@@ -1,4 +1,4 @@
-# Contact-Adressbook-Sharing-for-Baikal
+# Contact-Addressbook-Sharing-for-Baikal
 Extension to share Contacts/Adressbooks in Baikal
 Baikal Extension for Contact and Addressbook sharing with Baikal (sabre/DAV) Servers
 
