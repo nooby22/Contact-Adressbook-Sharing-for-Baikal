@@ -37,7 +37,7 @@ Conzept(s) of Sharing with this Extension:
 - Error-Messges due to i.e. server problems might publicate data from the yaml config file in some cases (not in my Tests) ...
 - Gemini AI advices therefore to rename the contacts_share.php in contacts_share.php_off after configuration. 
 
-- However here some thoughts concerning security and putative problems:
+However here some thoughts concerning security and putative problems:
 - Acessibility of all files is the same as for all other baikal files (Mode 644). Authentification is done with baikal data and baikal processes. 
 - No additional passwords are stored (no hashes and no plain text)
 - No changes with respect to the original data structure means compatiblitity with future baikal versions is given. Extension might stop working.
@@ -48,7 +48,7 @@ Conzept(s) of Sharing with this Extension:
 - This was also the case with other calendars (e.g. tine20). So check "read-only" in a client, when the option is given to avoid problems.
 - For me this behaviour was a pain with other systems .. when switching to Baikal there was no contact sharing at all .. so this is OK for me!
 
-- How to get it working: 
+How to get it working: 
 - replace the Server.php with the modified version in \baikal\Core\Frameworks\Baikal\Core\ (store the original file to be able to uninstall!)
 - copy SharedReadonlyCardDAVBackend.php into the same folder \baikal\Core\Frameworks\Baikal\Core\
 - copy contacts_share.php into \baikal\html\ and open the file in the browser with yourdomain.com/baikal/html/contacts_share.php 
