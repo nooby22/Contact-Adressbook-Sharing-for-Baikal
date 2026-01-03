@@ -63,9 +63,9 @@ class SharedReadonlyCardDAVBackend extends CardDAVPDO {
                     'uri'          => 'shared-' . $row['id'] . '-' . $row['uri'], 
                     'principaluri' => $principalUri,
                     '{DAV:}displayname' => $row['displayname'] . ' (Geteilt)',
-                    '{sabredav.org}read-only' => true,
+                    '{http://sabredav.org/ns}read-only' => true,
                     '{urn:ietf:params:xml:ns:carddav}addressbook-description' => $row['description'],
-                    '{sabredav.org}sync-token' => $row['synctoken'],
+                    '{http://sabredav.org/ns}sync-token' => $row['synctoken'],
                 ];
             }
         } catch (\Exception $e) {
@@ -122,4 +122,5 @@ class SharedReadonlyCardDAVBackend extends CardDAVPDO {
         return ['{DAV:}all'];
     }
 }
+
 
