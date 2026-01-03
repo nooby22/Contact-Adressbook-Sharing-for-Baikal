@@ -45,7 +45,7 @@ However here some thoughts concerning security and putative problems:
 - All pathes are compatible with the standard pathes used in baikal 11.1, differing installations might have to adapt pathes in the code.
 - One important point in the end:
 - If users try to write contacts into shared adressbooks nothing will be written into the databes but the client stores changes locally
-- This was also the case with other calendars (e.g. tine20). So check "read-only" in a client, when the option is given to avoid problems.
+- This was also the case with other calendars (e.g. tine20). So check "read-only" in a client (possible in TB & DavX5), when the option is given to avoid problems.
 - For me this behaviour was a pain with other systems .. when switching to Baikal there was no contact sharing at all .. so this is OK for me!
 
 How to get it working: 
