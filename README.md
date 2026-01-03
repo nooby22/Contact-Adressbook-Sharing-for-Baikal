@@ -1,5 +1,5 @@
 # Contact-Adressbook-Sharing-for-Baikal
-Extennson to share Contacts/Adressbooks in Baikal
+Extension to share Contacts/Adressbooks in Baikal
 Baikal Extension for Contact and Adressbook sharing with Baikal (sabre/DAV) Servers
 
 The Extension was tested with Baikal 11.1 (https://github.com/sabre-io/Baikal) for mysql and SQLite configuration
