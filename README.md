@@ -26,12 +26,12 @@ Spoiler: You can read what to do for installation at the end of the file … but
 - Baikal is finally controlling if write access and write commands are allowed.
 
 - To use this extension and functionality SharedReadonlyCardDAVBackend.php has to be "called" and used in the Server.php file when creating backends.
-- Therefore some codelines for CardDAV handlig are modified not dircty calling PDO.php but SharedReadonlyCardDAVBackend.php which uses also PDO.php.
+- Therefore some codelines for CardDAV handling are modified for not directly calling PDO.php but SharedReadonlyCardDAVBackend.php which first which uses also PDO.php.
 - This means original code is still working and integral part of instances running with the extension and related modifications.
 
 - To control which adressbooks are shared with other users the contacts_share.php script is offering a UI (Right now just for the admin!).
 - The script authenticates against the Baikal password hash of the admin. If authentication is OK the subsequent processes can start.
-- By using the data in the yaml config file it is checked whether SQLite or mysql is used and refering data for DB access is collected.
+- By using the data in the yaml config file of Baikal it is checked whether SQLite or mysql is used and refering data for DB access is collected.
 - If the needed additional table "addressbook_shares" is not existing, it will be added automatically. This is the only DB change made!
 - The UI offers functionality for sharing and revoking shares (remember: as implemented right now this can be done just by the admin!)
 - Error-Messges due to i.e. server problems might publicate data from the yaml config file in some cases (not in my Tests) ...
@@ -40,18 +40,18 @@ Spoiler: You can read what to do for installation at the end of the file … but
 **However here some thoughts concerning security and putative problems:**
 - Acessibility of all files is the same as for all other baikal files (Mode 644). Authentification is done with baikal data and baikal processes. 
 - No additional passwords are stored (no hashes and no plain text)
-- No changes with respect to the original data structure means compatiblitity with future baikal versions is given. Extension might stop working.
+- No changes with respect to the original data structure means compatiblitity with future baikal versions is given. Extension might stop working when Baikal code is changed in future versions.
 - You can uninstall by switching back to the original Server.php (replace with original file!), deleting the other 2 file and the table in the DB.
-- All pathes are compatible with the standard pathes used in baikal 11.1, differing installations might have to adapt pathes in the code.
+- All pathes are compatible with the standard pathes used in baikal 11.1, differing installations might have to adapt pathes in the extension code.
 - One important point in the end:
-- If users try to write contacts into shared adressbooks nothing will be written into the databes but the client stores changes locally
-- This was also the case with other calendars (e.g. tine20). So check "read-only" in a client (possible in TB & DavX5), when the option is given to avoid problems.
-- For me this behaviour was a pain with other systems .. when switching to Baikal there was no contact sharing at all .. so this is OK for me!
+- If users try to write contacts into shared adressbooks nothing will be written into the databes but the client may store changes locally, leading to a desync. 
+- This was also the case with other calendars (e.g. tine20). So set to "read-only" in the client (possible in TB & DavX5), when the option is given to avoid these problems.
+- For me this behaviour was a pain with other systems .. when switching to Baikal there was no contact sharing at all .. so this workoround is OK for me now!
 
 **How to get it working:**
-- replace the Server.php with the modified version in \baikal\Core\Frameworks\Baikal\Core\ (store the original file to be able to uninstall!)
+- replace the Server.php with the modified version in \baikal\Core\Frameworks\Baikal\Core\ (store or rename the original file to be able to "uninstall" !)
 - copy SharedReadonlyCardDAVBackend.php into the same folder \baikal\Core\Frameworks\Baikal\Core\
 - copy contacts_share.php into \baikal\html\ and open the file in the browser with yourdomain.com/baikal/html/contacts_share.php 
-- login with your Baikal admin credentials (username and password) and share ore revoke shares (sorry the interface is in German)
+- login with your Baikal admin credentials (username and password) and share or revoke shares (sorry the interface is in German)
 
 **Thanks to the Baikal maintaining team!**
