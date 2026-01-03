@@ -48,7 +48,7 @@ Spoiler: You can read what to do for installation at the end of the file … but
 - This was also the case with other calendars (e.g. tine20). So set to "read-only" in the client (possible in TB & DavX5), when the option is given to avoid these problems.
 - For me this behaviour was a pain with other systems .. when switching to Baikal there was no contact sharing at all .. so this workoround is OK for me now!
 
-**How to get it working:**
+**Installation - How to get it working:**
 - replace the Server.php with the modified version in \baikal\Core\Frameworks\Baikal\Core\ (store or rename the original file to be able to "uninstall" !)
 - copy SharedReadonlyCardDAVBackend.php into the same folder \baikal\Core\Frameworks\Baikal\Core\
 - copy contacts_share.php into \baikal\html\ and open the file in the browser with yourdomain.com/baikal/html/contacts_share.php 
