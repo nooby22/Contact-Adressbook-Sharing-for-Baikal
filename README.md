@@ -10,7 +10,7 @@ The extion consists of 3 files:
 2. SharedReadonlyCardDAVBackend.php
 3. Server.php
 
-Spoiler: You can read what to do for installatione at the end of the file … but there is helpfull Information before.
+Spoiler: You can read what to do for installation at the end of the file … but there is helpfull information before.
 
 Conzept(s) of Sharing with this Extension:
 - The data structure of Baikal will not be touched or changed. A deletion of the extion is possible without any harm to your installation.
