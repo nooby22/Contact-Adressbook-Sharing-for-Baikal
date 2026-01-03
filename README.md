@@ -1,10 +1,10 @@
 # Contact-Adressbook-Sharing-for-Baikal
 Extension to share Contacts/Adressbooks in Baikal
-Baikal Extension for Contact and Adressbook sharing with Baikal (sabre/DAV) Servers
+Baikal Extension for Contact and Addressbook sharing with Baikal (sabre/DAV) Servers
 
 The Extension was tested with Baikal 11.1 (https://github.com/sabre-io/Baikal) for mysql and SQLite configuration
 
-The extion consists of 3 files:
+The extension consists of 3 files:
 
 1. contacts_share.php 
 2. SharedReadonlyCardDAVBackend.php
@@ -12,7 +12,7 @@ The extion consists of 3 files:
 
 Spoiler: You can read what to do for installation at the end of the file … but there is helpfull information before.
 
-**Conzept(s) of Sharing with this Extension:**
+**Concept(s) of Sharing with this Extension:**
 - The data structure of Baikal will not be touched or changed. A deletion of the extion is possible without any harm to your installation.
 - The Concept indroduces a new table "addressbook_shares" to the DB (mysql or SQLite). No other tables are changed or restructured.
 - In this new table adressbookIDs and principleURIs are stored (in pairs) indicating which adressbook will be shared !read-only! for a user 
